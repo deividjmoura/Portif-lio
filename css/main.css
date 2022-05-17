@@ -1,206 +1,32 @@
-body {
-    background-size: 100%;
-    background-image: linear-gradient(
-      to top,
-      hsla(133, 82%, 26%, 0.834),
-      hsla(133, 82%, 26%, 0.834) 50%,
-      hsla(133, 82%, 26%, 0.834) 50%
-    ); 
-    font-family: 'Mulish', sans-serif;
-    color: hsla(200,0%,0%,.7);
-  }
-  
-  section#top {
-    height: 90vh;
-  } 
-  #contato {
-    height: 90vh;
-    background-image: linear-gradient(
-      to bottom,
-      rgb(60, 70, 174),
-      rgb(49, 25, 230) 60%,
-      rgb(49, 25, 230) 40%
-    ); 
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin-top: 2%;
-    margin-left: 4%;
-    margin-right: 4%;
-    border: transparent;
-    border-radius: 15px 15px;
-    text-align: center;
-    }
-  
-  #texto1 {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  /*
-    margin-right: 10%;
-  }
-  */
-  #botoes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 1%;
-  }
-  
-  #menu {
-    width: 15px;
-  }
-  
-  #profile img {
-    width: 35%;
-    border-style: double;
-    border-color: #54b3d6;
-    border-radius: 35px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  #texto1 a {
-    background-image: linear-gradient(
-      to right,
-      #54b3d6,
-      #54b3d6 50%,
-      #000 50%
-    );
-    background-size: 200% 100%; 
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-   #texto1 a:before{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  #texto1 a:hover {
-   background-position: 0;
-  }
-  
-  #texto1 a:hover::before{
-    background: #54b3d6;
-    width: 100%;
-  }
-  
-  
-  .social img {
-    width: 40px;
-  }
+body{
+background-color: rgba(24, 72, 111, 0.904);
+color: #fffefedc;
+}
 
-  .pt-5 img {
-    width: 45px;
-  }
-  
-  h1 {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 50px;
-    text-shadow: 3px 3px #4a3e3e87;
-    padding-top: 3%;
-  }
-  
-  h3 {
-    margin-top: -25px;
-  }
-  #sobre {
-    background-image: linear-gradient(
-      to bottom,
-      hsl(228, 69%, 48%),
-      hsla(242, 69%, 48%, 0.829) 75%,
-      hsla(242, 69%, 48%, 0.829) 25%
-    ); 
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin-top: 0%;
-    margin-left: 4%;
-    margin-right: 4%;
-    border: transparent;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.428);
-    border-radius: 15px;
-    display: block;
-    margin-top: 2%;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  #sobre1 a {
-    background-image: linear-gradient(
-      to right,
-      #54b3d6,
-      #54b3d6 50%,
-      #000 50%
-    );
-    background-size: 200% 100%; 
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-    
-  }
-  
-  #sobre1 a:before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-    
-  }
-  
-  #sobre1 a:hover {
-   background-position: 0;
-   
-  }
-  
-  #sobre1 a:hover::before {
-    background: #54b3d6;
-    width: 100%;
-  }
-  
-  #sobre2 {
-    align-items: center;
-    justify-items: center;
-    padding-bottom: 1%;
-  }
-  button#cv {
-    align-items: center;
-    justify-content: center;
-    background-color:#54b3d6;
-    border: transparent;
-    border-radius: 15px;
-  }
-  
-  #sobre p {
-  padding-top: 1%;
-  }
-  
-  footer {
-    text-align: center;
-  }
 
-  [type="checkbox"]:checked,
+h1 {
+  font-size: 55px;
+}
+
+h3 {
+  margin-top: -25px;
+}
+
+#profile img {
+  width: 30%;
+  border-style: double;
+  border-color: #54b3d6;
+  border-radius: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pt-5 img {
+  width: 30px;
+}
+
+[type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
   position: absolute;
   left: -9999px;
@@ -359,6 +185,16 @@ body {
 .nav ul li:nth-child(4){
   transition-delay: 50ms;
 }
+.nav ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.3vh;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #ebe8e8;
+}
 .nav ul li a{
   font-family: 'Montserrat', sans-serif;
   font-size: 9vh;
@@ -429,4 +265,72 @@ body {
   .nav ul li a{
     font-size: 8vh;
   }
+
+  main {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(228, 62%, 56%),
+      #192373d6 75%,
+      #192373d6 25%
+    ); 
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-right: 4%;
+    box-shadow: 0 0 5em rgba(234, 225, 225, 0.509);
+    border-radius: 25px;
+    display: block;
+    margin-top: 2%;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #sobre a {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #ebe8e8 50%
+    );
+    background-size: 200% 100%; 
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  #sobre a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  #sobre a:hover {
+   background-position: 0;
+   
+  }
+  
+  #sobre a:hover::before {
+    background: #54b3d6;
+    width: 100%;
+  }
+  
+  #sobre p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    margin: 5px;
+  }
+
 
