@@ -3,6 +3,7 @@ background-color: rgba(24, 72, 111, 0.904);
 color: #fffefedc;
 }
 
+
 h1 {
   font-size: 55px;
 }
@@ -184,6 +185,16 @@ h3 {
 .nav ul li:nth-child(4){
   transition-delay: 50ms;
 }
+.nav ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.3vh;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 800;
+  display: inline-block;
+  position: relative;
+  color: #ebe8e8;
+}
 .nav ul li a{
   font-family: 'Montserrat', sans-serif;
   font-size: 9vh;
@@ -321,3 +332,5 @@ h3 {
     font-size: 15px;
     margin: 5px;
   }
+
+
