@@ -23,7 +23,7 @@ h3 {
 }
 
 .pt-5 img {
-  width: 30px;
+  width: 35px;
 }
 
 [type="checkbox"]:checked,
@@ -187,17 +187,17 @@ h3 {
 }
 .nav ul li {
   font-family: 'Montserrat', sans-serif;
-  font-size: 4.3vh;
+  font-size: 35px;
+  text-align: center;
   text-transform: uppercase;
-  line-height: 1.2;
-  font-weight: 800;
+  line-height: 1.2; 
   display: inline-block;
   position: relative;
   color: #ebe8e8;
 }
-.nav ul li a{
+.nav ul.pt-5 li a{
   font-family: 'Montserrat', sans-serif;
-  font-size: 9vh;
+  font-size: 35px;
   text-transform: uppercase;
   line-height: 1.2;
   font-weight: 800;
@@ -263,7 +263,7 @@ h3 {
  
   }
   .nav ul li a{
-    font-size: 8vh;
+    font-size: 35px;
   }
 
   main {
@@ -332,5 +332,4 @@ h3 {
     font-size: 15px;
     margin: 5px;
   }
-
 
