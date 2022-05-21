@@ -13,7 +13,7 @@ h3 {
 }
 
 #profile img {
-  width: 50%;
+  width: 30%;
   border-style: double;
   border-color: #54b3d6;
   border-radius: 35px;
@@ -187,7 +187,7 @@ h3 {
 }
 .nav ul li {
   font-family: 'Montserrat', sans-serif;
-  font-size: 29px;
+  font-size: 35px;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2; 
@@ -221,7 +221,7 @@ h3 {
   left: 0;
   background-color: #192373;
   opacity: 0.8;
-  transition: width 250ms linear;
+  transition: width 10ms linear;
 }
 .nav ul li a:hover:after{
   width: 100%;
