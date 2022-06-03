@@ -1,0 +1,535 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>teste
+    </title>
+    <style>
+      body {
+        background-image: url(https://images.pexels.com/photos/4019161/pexels-photo-4019161.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load);
+        background-repeat:repeat repeat;
+        opacity: 70%;
+      }
+      .button {
+        display: block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #3e8e41;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      .button:hover {
+        background-color: #3e8e41}
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .container {
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 300px;
+        height: 300px;
+        background: #fff;
+      }
+      span,
+      input {
+        border:2px solid rgba(255,255,255,.5);
+        font-size:1.75em;
+        padding:.25em .5em .3125em;
+        color:rgba(255,255,255,.5);
+        border-radius:.25em;
+        background:transparent;
+        transition:all .100s;
+        &:focus{
+          outline:none;
+          color:rgba(255,255,255,.75);
+          border-color:rgba(255,255,255,.75);
+        }
+        &.keyup {
+          color:white;
+          border-color:white;
+          text-shadow:0 0 .125em white;
+          box-shadow:0 0 .25em white,inset 0 0 .25em white;
+        }
+      } 
+canvas {
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        pointer-events:none;
+      }
+      input {
+        font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+      }
+      $placeholder-color:rgba(255,255,255,.5);
+      ::-webkit-input-placeholder {
+        color:$placeholder-color;
+        text-shadow:0 0 .125em transparent;
+        transition:all .25s;
+      }
+      input:focus::-webkit-input-placeholder {
+        opacity:.5;
+      }
+      ::-moz-placeholder {
+        color:$placeholder-color;
+        text-shadow:0 0 .125em transparent;
+        transition:all .25s;
+      }
+      input:focus::-moz-placeholder {
+        opacity:.5;
+      }
+      :-ms-input-placeholder {
+        color:$placeholder-color;
+        text-shadow:0 0 .125em transparent;
+        transition:all .25s;
+      }
+      input:focus:-ms-input-placeholder {
+        opacity:.5;
+      }
+      html,body {
+        height:100%;
+        overflow:hidden;
+      }
+      html {
+        background:#333 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/68397/forest-fly-agaric-fog-moss-fliegenpilz.jpg) no-repeat center bottom;
+        background-size:cover;
+      }
+      }
+      input {
+        position:absolute;
+        box-sizing:border-box;
+        bottom: 4em;
+        left:50%;
+        width:11em;
+        margin-left:-5.5em;
+      }
+      .input{
+        font: Arial;
+        text-align: center;
+        font-size:22px;
+        color: #00FF00;
+      }
+    </style>
+  </head>
+  <body>  
+    <div class="container" class="box">
+      <input type="text" placeholder="o resultado do sorteio é..." id="result" class="input">
+    </div>
+    <div class="container" class="box">
+      <button class="button" onclick="sorteio()">Clique aqui para sortear
+      </button>
+    </div>
+    <script>
+      function sorteio (){
+        let sorteio = parseInt( Math.random() * 101 );
+        //   alert("o numero sorteado é:" + sorteio);
+        document.getElementById('result').value = sorteio;
+      }
+    </script>  
+<script>
+      console.clear();
+      var MAX_LIFE = 50;
+      var canvas = document.querySelector('canvas');
+      var input = document.querySelector('input');
+      var field = {
+      }
+      var hasFocus = false;
+      var caret = document.createElement('span');
+      caret.style.position = 'absolute';
+      caret.style.left = 0;
+      caret.style.top = 0;
+      caret.style.margin = 0;
+      caret.style.width = 'auto';
+      caret.style.visibility = 'hidden';
+      document.body.appendChild(caret);
+      function reposition() {
+        field = input.getBoundingClientRect();
+      }
+      window.onload = reposition;
+      window.onresize = reposition;
+      reposition();
+      input.onfocus = function() {
+        hasFocus = true}
+      input.onblur = function() {
+        hasFocus = false}
+      var keys = [8,9,13,16,17,18,27,32,33,34,35,36,37,38,39,40,46,91,93,112,113,114,115,116,117,118,119,120,121,122,123];
+      function spawnsCharacter(keyCode) {
+        return keys.indexOf(keyCode) === -1;
+      }
+      function burst(intensity) {
+        var behavior = [
+          this.behavior.force(-.015,-.015),
+          this.behavior.cohesion(50),
+          this.behavior.move()
+        ];
+        var size = 1.25;
+        var force = .7;
+        var lifeMin = 0;
+        var progress = Math.min(field.width, caret.offsetWidth) / field.width;
+        var offset = field.left + (field.width * progress);
+        var rangeMin = Math.max(field.left, offset - 30);
+        var rangeMax = Math.min(field.right, offset + 10);
+        this.spray(intensity,function(){
+          return [
+            null,null,
+            Vector.create(
+              Random.between(rangeMin + 10, rangeMax - 20),
+              Random.between(field.top + 15, field.bottom - 15)
+            ),
+            Vector.random(force),
+            size + Math.random(),
+            Random.between(lifeMin,0),behavior
+          ]}
+                  );
+        // top edge
+        this.spray(intensity * .5,function(){
+          return [
+            null,null,
+            Vector.create(
+              Random.between(rangeMin, rangeMax),
+              field.top
+            ),
+            Vector.random(force),
+            size + Math.random(),
+            Random.between(lifeMin,0),behavior
+          ]}
+                  );
+ // bottom edge
+        this.spray(intensity * .5,function(){
+          return [
+            null,null,
+            Vector.create(
+              Random.between(rangeMin, rangeMax),
+              field.top + field.height
+            ),
+            Vector.random(force),
+            size + Math.random(),
+            Random.between(lifeMin,0)
+            ,behavior
+          ]}
+                  );
+        // left edge
+        if (input.value.length === 1) {
+          this.spray(intensity * 2,function(){
+            return [
+              null,null,
+              Vector.create(
+                field.left + (Math.random() * 20),
+                Random.between(field.top,field.bottom)
+              ),
+              Vector.random(force),
+              size + Math.random(),
+              Random.between(lifeMin,0),behavior
+            ]}
+                    );
+        }
+        // right edge
+        if (rangeMax == field.right) {
+          this.spray(intensity * 2,function(){
+            return [
+              null,null,
+              Vector.create(
+                field.right,
+                Random.between(field.top,field.bottom)
+              ),
+              Vector.random(force),
+              size + Math.random(),
+              Random.between(lifeMin,0),behavior
+            ]}
+                    );
+        }
+      }
+ / start particle simulation
+      simulate(
+        '2d', {
+          init: function() {
+          }
+          ,
+          tick: function(particles) {
+            if (!particles){
+              return;
+            }
+            particles.forEach(function(p){
+              if (p.life > MAX_LIFE) {
+                this.destroy(p);
+              }
+            }
+                             );
+          }
+          ,
+          beforePaint: function() {
+            this.clear();
+          }
+          ,
+          paint: function(particle) {
+            var p = particle.position;
+            var s = particle.size;
+            var o = 1 - (particle.life / MAX_LIFE);
+            this.paint.circle(p.x, p.y, s, 'rgba(255,255,255,' + o +')');
+            this.paint.circle(p.x, p.y, s + 1.5, 'rgba(231,244,255,' + (o * .25) + ')');
+            // extra
+            var w = 2;
+            var wh = w * .5;
+            var h = 35;
+            var hh = h * .5;
+            this.context.rect(p.x -wh, p.y - hh, w, h);
+            this.context.fillStyle = 'rgba(231,244,255,' + (o * .025) + ')';
+            this.context.fill();
+            this.context.closePath();
+          }
+          ,
+          afterPaint: function() {
+            // nothing
+          }
+          ,
+          action: function(e) {
+            if (!spawnsCharacter(e.keyCode)) {
+              return;
+            }
+            caret.textContent = input.value;
+            burst.call(this,12);
+            input.classList.add('keyup');
+            setTimeout(function(){
+              input.classList.remove('keyup')}
+                       ,100);
+          }
+        }
+      );
+ // "simulate" particle simulation logic
+      /**
+ * Constants
+ */
+      PI_2 = Math.PI / 2;
+      PI_180 = Math.PI / 180;
+      /**
+ * Random
+ */
+      var Random = {
+        between: function(min, max) {
+          return min + (Math.random() * (max - min));
+        }
+      }
+      /**
+ * 2D Vector Class
+ */
+      function Vector(x, y) {
+        this._x = x || 0;
+        this._y = y || 0;
+      }
+      Vector.create = function(x, y) {
+        return new Vector(x, y);
+      };
+      Vector.add = function(a, b) {
+        return new Vector(a.x + b.x, a.y + b.y);
+      };
+      Vector.subtract = function(a, b) {
+        return new Vector(a.x - b.x, a.y - b.y);
+      };
+      Vector.random = function(range) {
+        var v = new Vector();
+        v.randomize(range);
+        return v;
+      };
+      Vector.distanceSquared = function(a, b) {
+        var dx = a.x - b.x;
+        var dy = a.y - b.y;
+        return dx * dx + dy * dy;
+      };
+      Vector.distance = function(a, b) {
+        var dx = a.x - b.x;
+        var dy = a.y - b.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      };
+      Vector.prototype = {
+        get x() {
+          return this._x;
+        }
+        ,
+        get y() {
+          return this._y;
+        }
+        ,
+        set x(value) {
+          this._x = value;
+        } 
+,
+set y(value) {
+          this._y = value;
+        }
+        ,
+        get magnitudeSquared() {
+          return this._x * this._x + this._y * this._y;
+        }
+        ,
+        get magnitude() {
+          return Math.sqrt(this.magnitudeSquared);
+        }
+        ,
+        get angle() {
+          return Math.atan2(this._y, this._x) * 180 / Math.PI;
+        }
+        ,
+        clone: function() {
+          return new Vector(this._x, this._y);
+        }
+        ,
+        add: function(v) {
+          this._x += v.x;
+          this._y += v.y;
+        }
+        ,
+        subtract: function(v) {
+          this._x -= v.x;
+          this._y -= v.y;
+        }
+        , 
+        multiply: function(value) {
+          this._x *= value;
+          this._y *= value;
+        }
+        ,
+        divide: function(value) {
+          this._x /= value;
+          this._y /= value;
+        }
+        ,
+        normalize: function() {
+          var magnitude = this.magnitude;
+          if (magnitude > 0) {
+            this.divide(magnitude);
+          }
+        }
+        ,
+        limit: function(treshold) {
+          if (this.magnitude > treshold) {
+            this.normalize();
+            this.multiply(treshold);
+          }
+        }
+        , 
+randomize: function(amount) {
+          amount = amount || 1;
+          this._x = amount * 2 * (-.5 + Math.random());
+          this._y = amount * 2 * (-.5 + Math.random());
+        }
+        ,
+        rotate: function(degrees) {
+          var magnitude = this.magnitude;
+          var angle = ((Math.atan2(this._x, this._y) * PI_HALF) + degrees) * PI_180;
+          this._x = magnitude * Math.cos(angle);
+          this._y = magnitude * Math.sin(angle);
+        }
+        ,
+        flip: function() {
+          var temp = this._y;
+          this._y = this._x;
+          this._x = temp;
+        }
+        ,
+        invert: function() {
+          this._x = -this._x;
+          this._y = -this._y;
+        }
+        ,
+        toString: function() {
+          return this._x + ', ' + this._y;
+        }
+      }
+      /**
+ * Particle Class
+ */
+      function Particle(id, group, position, velocity, size, life, behavior) {
+        this._id = id || 'default';
+        this._group = group || 'default';
+        this._position = position || new Vector();
+        this._velocity = velocity || new Vector();
+        this._size = size || 1;
+        this._life = Math.round(life || 0);
+        this._behavior = behavior || [];
+      }
+      Particle.prototype = {
+        get id() {
+          return this._id;
+        }
+        ,
+        get group() {
+          return this._group;
+        }
+        ,
+        get life() {
+          return this._life;
+        }
+        ,
+        get size() {
+          return this._size;
+        }
+        ,
+        set size(size) {
+          this._size = size;
+        }
+        , 
+get position() {
+          return this._position;
+        }
+        ,
+        get velocity() {
+          return this._velocity;
+        }
+        ,
+        update: function(stage) {
+          this._life++;
+          var i = 0;
+          var l = this._behavior.length;
+          for (; i < l; i++) {
+            this._behavior[i].call(stage, this);
+          }
+        }
+        ,
+        toString: function() {
+          return 'Particle(' + this._id + ') ' + this._life + ' pos: ' + this._position + ' vec: ' + this._velocity;
+        }
+      }
+      // setup DOM
+      function simulate(dimensions, options) {
+        // private vars
+        var particles = [];
+        var destroyed = [];
+        var update = update || function() {
+        };
+        var stage = stage || function() {
+        };
+        var canvas;
+        var context;
+        if (!options) {
+          console.error('"options" object must be defined');
+          return;
+        }
+        if (!options.init) {
+          console.error('"init" function must be defined');
+          return;
+        }
+        if (!options.paint) {
+          console.error('"paint" function must be defined');
+          return;
+        }
+        if (!options.tick) {
+          options.tick = function() {
+          };
+        }
+        if (!options.beforePaint) {
+          options.beforePaint = function() {
+          };
+        }  
