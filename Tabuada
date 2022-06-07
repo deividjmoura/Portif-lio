@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Funcao tabuada ate 1000 
+    </title>
+  </head>
+  <body>
+    <button onclick="mostrarTabuada()">Criar tabuada
+    </button>
+    <button onclick="limparTabuada()">Limpar tabuada
+    </button>
+    <div id="output">
+    </div>
+    <script>
+      
+      function mostrarTabuada(){
+        let n = prompt("digite um numero");
+        limparTabuada();
+        n = parseFloat(n);
+        let i = 1;
+        while(i <= 1000){
+          mensagem += n + " x " + i + " = " + (n * i) + "<br>";
+          i++;
+          
+        }
+        output.innerHTML = mensagem;
+      }
+      function limparTabuada(){
+        mensagem = "";
+        output.innerHTML = mensagem;
+      }
+      let output = document.querySelector("#output");
+      let mensagem = "";
+      // pegar objeto do html por id
+      //  for (let i = 0; i < 1001; i++){
+      // mensagem += "i: " + i + "<br>";
+      // output.innerHTML = " texto inserido por js "; // inserir no objeto selecionado
+    </script>
+  </body>
+</html>
