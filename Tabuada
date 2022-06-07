@@ -31,10 +31,6 @@
       }
       let output = document.querySelector("#output");
       let mensagem = "";
-      // pegar objeto do html por id
-      //  for (let i = 0; i < 1001; i++){
-      // mensagem += "i: " + i + "<br>";
-      // output.innerHTML = " texto inserido por js "; // inserir no objeto selecionado
     </script>
   </body>
 </html>
