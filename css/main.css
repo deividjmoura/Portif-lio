@@ -254,6 +254,11 @@ h3 {
   .menu-icon:not(:checked) + label{
     right: 55px;
   }
+
+  #cv {
+    font-size: 4vh;
+  }
+
   .logo {
     left: 30px;
   }
