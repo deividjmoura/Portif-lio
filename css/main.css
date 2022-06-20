@@ -249,7 +249,7 @@ h3 {
   transition-delay: 1640ms;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 900px) {
   .menu-icon:checked + label,
   .menu-icon:not(:checked) + label{
     right: 55px;
