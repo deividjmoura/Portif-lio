@@ -249,14 +249,10 @@ h3 {
   transition-delay: 1640ms;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 991px) {
   .menu-icon:checked + label,
   .menu-icon:not(:checked) + label{
     right: 55px;
-  }
-
-  #cv {
-    font-size: 2vh;
   }
 
   .logo {
@@ -338,6 +334,3 @@ h3 {
     margin: 5px;
   }
 
-#cv {
-  font-size: 4vh;
-}
