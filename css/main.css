@@ -2,8 +2,12 @@ html, body {
   padding: 0%;
   margin: 0%;
 }
-nav {
-  display: flex; 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#top {
+  display: flex;
   height: 100%;
   width: 100%;
   padding: 0; 
@@ -15,7 +19,24 @@ nav {
 #logo img {
     height: 70px;
 }
-nav button {
-  height: 7vh;
-  width: 15vh;
+.menu{
+  size: 100%;
+}
+div.menu:hover {
+  background-color: aliceblue;
+}
+#home {
+  display: none;
+  height: 30vh;
+  background-color: saddlebrown;
+}
+#about {
+  display: none;
+  height: 30vh;
+  background-color: rgb(35, 158, 33);
+}
+#certifications {
+  height: 30vh;
+  background-color: rgb(37, 76, 113);
+  display: none;
 }
