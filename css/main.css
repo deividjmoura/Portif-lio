@@ -16,27 +16,43 @@ a {
   align-items: center;
   background-color: rgb(114, 198, 250);
 }
-#logo img {
-    height: 70px;
+img#logo {
+    height: 30px;
 }
-.menu{
-  size: 100%;
+
+div.menu {
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 2vh;
+  margin: 0;
+  height: 5vh;
+  width: 20%;
 }
 div.menu:hover {
   background-color: aliceblue;
 }
 #home {
   display: none;
-  height: 30vh;
+  height: 93vh;
+  width: 100%;
   background-color: saddlebrown;
 }
 #about {
   display: none;
-  height: 30vh;
+  height: 93vh;
+  width: 100%;
   background-color: rgb(35, 158, 33);
 }
 #certifications {
-  height: 30vh;
+  height: 93vh;
+  width: 100%;
   background-color: rgb(37, 76, 113);
+  display: none;
+}
+#contact {
+  height: 93vh;
+  width: 100%;
+  background-color: rgb(44, 11, 127);
   display: none;
 }
