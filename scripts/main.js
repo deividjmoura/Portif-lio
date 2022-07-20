@@ -4,6 +4,38 @@ const about = document.getElementById('about');
 const certifications = document.getElementById('certifications');
 const contact = document.getElementById('contact');
 
+
+$(document).ready(function msg1(){
+    var msg1 = ['B', 'e']
+    var i = 0;
+     var refreshIntervalId = setInterval(()=>{
+       if(i != msg1.length){
+         
+       $('#msg').append(`
+   ${msg1[i]}
+   `)
+       i++;
+       }else{
+         clearInterval(refreshIntervalId);
+       }
+     }, 600)
+   } )
+   $(document).ready(function msg2(){
+    var msg2 = [' ','w', 'e', 'l', 'c', 'o', 'm', 'e', '!']
+    var i = 0;
+     var refreshIntervalId = setInterval(()=>{
+       if(i != msg2.length){
+         
+       $('#msg2').append(`
+   ${msg2[i]}
+   `)
+       i++;
+       }else{
+         clearInterval(refreshIntervalId);
+       }
+     }, 600)
+   } )
+
 /*
 function h() {
     if(home.style.display === 'none' || init.style.display === 'block' || contact.style.display === 'block' || certifications.style.display === 'block' || about.style.display === 'block') {
@@ -66,4 +98,5 @@ function ctt() {
         contact.style.display = 'block'
         init.style.display = 'none'
     }}
+
 
