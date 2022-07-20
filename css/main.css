@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 html, body {
   padding: 0%;
   margin: 0%;
+  font-family: 'Space Mono', monospace;
 }
 a {
   text-decoration: none;
@@ -14,7 +16,7 @@ a {
   margin: 0;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(114, 198, 250);
+  background-color: inherit(114, 198, 250);
 }
 img#logo {
     height: 30px;
@@ -27,32 +29,38 @@ div.menu {
   padding-top: 2vh;
   margin: 0;
   height: 5vh;
-  width: 20%;
+  width: 33%;
 }
 div.menu:hover {
   background-color: aliceblue;
 }
-#home {
+
+.sec {
+  color: black;
   display: none;
   height: 93vh;
   width: 100%;
+}
+
+#init {
+  color: black;
+  display: block;
+  padding: 30px;
+}
+
+#home {
   background-color: saddlebrown;
 }
 #about {
-  display: none;
-  height: 93vh;
-  width: 100%;
-  background-color: rgb(35, 158, 33);
+  background-color: rgb(9, 90, 102);
+}
+#profile {
+  height: 65vh;
+
 }
 #certifications {
-  height: 93vh;
-  width: 100%;
   background-color: rgb(37, 76, 113);
-  display: none;
 }
 #contact {
-  height: 93vh;
-  width: 100%;
   background-color: rgb(44, 11, 127);
-  display: none;
 }
