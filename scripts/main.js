@@ -4,37 +4,56 @@ const about = document.getElementById('about');
 const certifications = document.getElementById('certifications');
 const contact = document.getElementById('contact');
 
+const textDisplay = document.querySelector("#msg");
+const phrases = ["Welcome!"];
+let i = 0;
+let j = 0;
+let currentPhrase = [];
+let isDeleting = false;
+let isEnd = false
 
-$(document).ready(function msg1(){
-    var msg1 = ['B', 'e']
-    var i = 0;
-     var refreshIntervalId = setInterval(()=>{
-       if(i != msg1.length){
-         
-       $('#msg').append(`
-   ${msg1[i]}
-   `)
-       i++;
-       }else{
-         clearInterval(refreshIntervalId);
-       }
-     }, 600)
-   } )
-   $(document).ready(function msg2(){
-    var msg2 = [' ','w', 'e', 'l', 'c', 'o', 'm', 'e', '!']
-    var i = 0;
-     var refreshIntervalId = setInterval(()=>{
-       if(i != msg2.length){
-         
-       $('#msg2').append(`
-   ${msg2[i]}
-   `)
-       i++;
-       }else{
-         clearInterval(refreshIntervalId);
-       }
-     }, 600)
-   } )
+   let speadUp = Math.random() * (300 - 50) + 80;
+   let normalSpeed = Math.random() * (300 - 300) + 200;
+   let speed = isEnd ? 1000 : isDeleting ? speadUp : normalSpeed;
+
+
+
+function loop() {
+  isEnd = false;
+  textDisplay.innerHTML = currentPhrase.join("");
+  
+  if(i < phrases.length) {
+    
+    if(!isDeleting && j <= phrases[i].length) {
+      currentPhrase.push(phrases[i][j]);
+      j++
+    }
+    
+    if(isDeleting && j <= phrases[i].length) {
+      currentPhrase.pop(phrases[i][j]);
+      j--
+    }
+    
+    if(j == phrases[i].length) {
+      isEnd = true;
+      isDeleting = true;
+    }
+    
+    if(isDeleting && j === 0) {
+      currentPhrase = [];
+      isDeleting = false;
+      i++
+      if (i == phrases.length) {
+        i = 0;
+      }
+    }
+     
+    let speed = isEnd ? 20 : isDeleting ? speadUp : normalSpeed;
+  }
+  setTimeout(loop, speed);
+}
+
+loop();
 
 /*
 function h() {
