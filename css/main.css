@@ -5,8 +5,43 @@ html, body {
   font-family: 'Space Mono', monospace;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+  background-image: linear-gradient(
+    to right,
+    #058fc1,
+    #029bd3 50%,
+    #000000 50%
+  );
+  background-size: 200% 100%; 
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+a:hover {
+ background-position: 0;
+ 
+}
+
+a:hover::before {
+  background: #54b3d6;
+  width: 100%;
 }
 #top {
   display: flex;
@@ -36,26 +71,27 @@ div.menu:hover {
 }
 
 .sec {
-  color: black;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  margin: 10;
+  padding: 30px;
   display: none;
-  height: 93vh;
-  width: 100%;
+  color: black;
 }
 
 #init {
   color: black;
   display: block;
   padding: 30px;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
 }
 
-#home {
-  background-color: saddlebrown;
-}
-#about {
-  background-color: rgb(9, 90, 102);
-}
 #profile {
-  height: 65vh;
+  margin-top: -25px;
+  height: 40vh;
 
 }
 #certifications {
@@ -69,11 +105,44 @@ span {
   color: black;
 }
 h1 {
-  font-size: 9vh; 
-  margin-top: -30px;
+  font-size: 10vh; 
   display: block;
   height: 15vh;
 }
 p {
   font-size: 3vh;
+}
+.container {
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  display: block;
+}
+hr {
+  margin-top: -6px;
+  overflow: visible;
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+#aboutxt p {
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top: -18px;
+  font-size: 20px;
 }
