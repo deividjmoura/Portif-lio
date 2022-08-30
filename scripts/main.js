@@ -120,8 +120,11 @@ function ctt() {
 
 // night mode
 
+// pegamos o valor no localStorage
 const nightMode = document.querySelector('#night-mode')
 
+// ao clicar mudaremos as cores
 nightMode.addEventListener('click', () => {
-document.documentElement.classList.toggle('night-mode')
+  // adiciona a classe `night-mode` ao html
+  document.documentElement.classList.toggle('night-mode')
 })
