@@ -1,8 +1,44 @@
 /* night mode */
 .night-mode
 body {
-    background-color: black;
-    color: white;    
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 2, 2);    
+}
+a {
+  color: #ffffff;
+  background-color: rgb(2, 2, 2);
+  background-size: 200% 100%; 
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+a:before {
+  color: rgb(255, 255, 255);
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+ background-position: 0;
+ 
+}
+
+a:hover::before {
+  color: rgb(255, 255, 255);
+  background: #54b3d6;
+  width: 100%;
 }
 
 .social {
