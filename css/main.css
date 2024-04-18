@@ -21,16 +21,35 @@ section {
   color: white;
 }
 
+h1 {
+  position: relative;
+  font-family: 'Righteous', sans-serif;
+  font-size: 20vh;
+  text-align: center;
+  margin-top: 5vh; /* Ajuste conforme necessário */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra clara */
+}
+
+h1:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.25em; /* Altura da linha */
+  background-color: #000; /* Cor da linha */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover:before {
+  transform: scaleX(1);
+}
+
 #home {
   background-color: #0851d8;
 }
-#home.h1 {
-  text-align: center;
-  justify-content: center;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombreamento branco */
-  font-size: 120%; /* Aumentando em 20% */
-  font-family: 'Arial', sans-serif; /* Fonte mais atual */
-}
+
 
 #working {
   background-color: #0f73b6;
