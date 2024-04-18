@@ -7,7 +7,6 @@ body {
 }
 
 nav {
-  background-color: #3b5998;
   position: fixed;
   width: 100%;
   top: 0;
@@ -26,6 +25,19 @@ nav.contact {
   background-color: #3b5998; /* Cor da navegação na seção Contact */
 }
 
+.home-link {
+  color: #2123af; /* Cor da Home */
+}
+
+.working-link {
+  color: #0f73b6; /* Cor da Working */
+}
+
+.contact-link {
+  color: #3b5998; /* Cor da Contact */
+}
+
+
 section {
   min-height: 100vh;
   display: flex;
@@ -42,22 +54,6 @@ h1 {
   text-align: center;
   margin-top: 10vh; /* Reduzindo a margem superior */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-h1:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 0.25em;
-  background-color: #000;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-h1:hover:before {
-  transform: scaleX(1);
 }
 
 #home {
