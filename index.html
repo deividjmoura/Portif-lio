@@ -11,26 +11,42 @@
     <link href="./css/sideBar.css" rel="stylesheet" title="Default Style">
 </head>
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="#" class="button" id="about">About</a></li>
-                <li><a href="https://github.com/deividjmoura" target="_blank" rel="noopener noreferrer">Work</a></li>
-                <li><a href="https://photos.google.com/u/0/share/AF1QipNgq5W5-gXgrZGw6QlscQOC1vD92bHGUq34-oNDaAphEspGTm0adKwjFNSbFg5DTA?key=QTZsLWV3OHQ5YmtROHkzRk1QamdXMWY3OTNGUmhB" target="_blank" rel="noopener noreferrer">Certifications</a></li>
-            </ul>
-        </nav>
-        <div id="modal-container">
-            <div class="modal-content" id="about-content">
-                <span class="close">&times;</span>
-                <h2>About Modal</h2>
-                <p>This is the About modal content...</p>
-            </div>
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Home Section</h1>
+    </section>
+
+    <!-- Working Section -->
+    <section id="working">
+        <h1>Working Section</h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Section</h1>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar-fixed-top">
+        <ul>
+            <li><a href="#home" class="page-scroll">Home</a></li>
+            <li><a href="#working" class="page-scroll">Working</a></li>
+            <li><a href="#contact" class="page-scroll">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal Container -->
+    <div id="modal-container">
+        <div class="modal-content" id="about-content">
+            <span class="close">&times;</span>
+            <h2>About Modal</h2>
+            <p>This is the About modal content...</p>
         </div>
-        <h1>Deivid Moura</h1>
-        <h3>Programming and Web Development Student</h3>
-    </main>
+    </div>
+
     <footer style="text-align: center"><p>Developed in VS code. All rights reserved.</p></footer>
-    <script src="modal.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scroll.js"></script>
 </body>
 </html>
