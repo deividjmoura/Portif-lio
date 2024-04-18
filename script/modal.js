@@ -1,19 +1,20 @@
 $(document).ready(function() {
+    // Função para abrir o modal
     $('.button').click(function(){
-        var buttonId = $(this).attr('id');
-        $('#modal-container').fadeIn().removeAttr('class').addClass(buttonId + '-modal');
+        $('#modal-overlay').fadeIn();
+        $('#modal-content').fadeIn().css({
+            'top': '50%',
+            'left': '50%',
+            'transform': 'translate(-50%, -50%)',
+            'max-width': '50%'
+        });
         $('body').addClass('modal-active');
     });
     
-    $('#modal-container .close').click(function(){
-        $('#modal-container').fadeOut().addClass('out');
+    // Função para fechar o modal
+    $('#modal-overlay, #modal-close').click(function(){
+        $('#modal-overlay').fadeOut();
+        $('#modal-content').fadeOut();
         $('body').removeClass('modal-active');
-    });
-    
-    $('#modal-container').click(function(e){
-        if (e.target === this) {
-            $(this).fadeOut().addClass('out');
-            $('body').removeClass('modal-active');
-        }
     });
 });
