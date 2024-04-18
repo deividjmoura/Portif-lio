@@ -4,7 +4,7 @@ $(function() {
         setTimeout(function() {
             $('html, body').stop().animate({
                 scrollTop: $($anchor.attr('href')).offset().top
-            }, 1500, 'easeInOutExpo');
+            }, 10500, 'easeInOutExpo');
         }, 500); // Delay de 500ms antes de iniciar o scroll
         event.preventDefault();
     });
