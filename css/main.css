@@ -14,6 +14,18 @@ nav {
   z-index: 999;
 }
 
+nav.home {
+  background-color: #2123af; /* Cor da navegação na seção Home */
+}
+
+nav.working {
+  background-color: #0f73b6; /* Cor da navegação na seção Working */
+}
+
+nav.contact {
+  background-color: #3b5998; /* Cor da navegação na seção Contact */
+}
+
 section {
   min-height: 100vh;
   display: flex;

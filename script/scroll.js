@@ -26,22 +26,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// JavaScript (scroll.js)
-
-window.addEventListener('scroll', function() {
-    var sections = document.querySelectorAll('section');
-    var nav = document.querySelector('nav');
-    var current = '';
-
-    sections.forEach(function(section) {
-        var sectionTop = section.offsetTop;
-        var sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    nav.className = ''; // Remove todas as classes da nav
-    nav.classList.add(current); // Adiciona a classe correspondente à seção atual
-});
