@@ -1,14 +1,15 @@
+/* main.css */
 ul {
   margin: 0;
-  padding: 0; /* Aumenta a área vertical em 15% */
+  padding: 0;
   display: flex;
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 ul li {
   list-style: none;
-  margin: 20px; /* Espaçamento entre os itens */
+  margin: 20px;
   transition: 0.5s;
 }
 
@@ -16,7 +17,7 @@ ul li a {
   display: block;
   position: relative;
   text-decoration: none;
-  padding: 10px; /* Aumenta a área de clique dos itens */
+  padding: 10px;
   font-size: 18px;
   font-family: sans-serif;
   color: #fff;
@@ -24,36 +25,38 @@ ul li a {
   transition: 0.5s;
 }
 
-ul:hover li a {
-  transform: scale(1.5);
-  opacity: 0.2;
-  filter: blur(5px);
-}
+@media (min-width: 768px) {
+  ul:hover li a {
+    transform: scale(1.5);
+    opacity: 0.2;
+    filter: blur(5px);
+  }
 
-ul li a:hover {
-  transform: scale(2);
-  opacity: 1;
-  filter: blur(0);
-  text-decoration: none;
-  color: #fff;
-}
+  ul li a:hover {
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+    text-decoration: none;
+    color: #fff;
+  }
 
-ul li a:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2c3f7cb7;
-  transition: 0.5s;
-  transform-origin: right;
-  transform: scaleX(0);
-  z-index: -1;
-}
+  ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3f7cb7;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+  }
 
-ul li a:hover:before {
-  transition: transform 0.5s;
-  transform-origin: left;
-  transform: scaleX(1);
+  ul li a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
 }
