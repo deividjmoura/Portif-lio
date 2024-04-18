@@ -1,3 +1,4 @@
+/* main.css */
 body {
   margin: 0;
   padding: 0;
@@ -14,46 +15,42 @@ nav {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
-/* main.css */
 h1 {
-  position: relative;
   font-family: 'Righteous', sans-serif;
   font-size: 20vh;
   text-align: center;
-  margin-top: 20vh; /* Centraliza verticalmente */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra clara */
+  margin-top: 10vh; /* Reduzindo a margem superior */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo para adicionar uma linha abaixo do título */
 h1:before {
   content: '';
   position: absolute;
   width: 100%;
-  height: 0.25em; /* Altura da linha */
-  background-color: #000; /* Cor da linha */
+  height: 0.25em;
+  background-color: #000;
   bottom: 0;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-/* Estilo para animação da linha ao passar o mouse sobre o título */
 h1:hover:before {
   transform: scaleX(1);
 }
 
-
 #home {
   background-color: #0851d8;
 }
-
 
 #working {
   background-color: #0f73b6;
@@ -63,3 +60,8 @@ h1:hover:before {
   background-color: #3b5998;
 }
 
+/* Estilos para as divs abaixo dos h1 */
+section div {
+  text-align: center; /* Centraliza o texto */
+  margin: 20px; /* Espaçamento entre as divs */
+}
