@@ -61,3 +61,15 @@ ul li a {
   }
 }
 
+/* main.css */
+ul.home-link li a {
+  color: #2123af; /* Cor da Home */
+}
+
+ul.working-link li a {
+  color: #0f73b6; /* Cor da Working */
+}
+
+ul.contact-link li a {
+  color: #3b5998; /* Cor da Contact */
+}
