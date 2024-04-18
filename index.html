@@ -2,6 +2,7 @@
 <html> 
     <head>
          <link href="./css/main.css" rel="stylesheet" title="Default Style"> 
+         <link href="./css/modal.css" rel="stylesheet" title="Default Style"> 
          <link href="./css/sideBar.css" rel="stylesheet" title="Default Style">
          <meta charset="utf-8"> 
          <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -20,7 +21,7 @@
             <main>
                   <nav>
                     <ul>
-                      <li><a href="https://github.com/deividjmoura" target="_blank" rel="noopener noreferrer">About</a></li>
+                      <li><a href="https://github.com/deividjmoura" class="button" id="about">About</a></li>
                       <li><a href="https://github.com/deividjmoura" target="_blank" rel="noopener noreferrer">Work</a></li>
                       <li><a href="https://photos.google.com/u/0/share/AF1QipNgq5W5-gXgrZGw6QlscQOC1vD92bHGUq34-oNDaAphEspGTm0adKwjFNSbFg5DTA?key=QTZsLWV3OHQ5YmtROHkzRk1QamdXMWY3OTNGUmhB" target="_blank" rel="noopener noreferrer">Certifications</a></li>
                       <!--<li><a href="mailto: dejesusdemouradeivid@gmail.com?subject=Questions&amp;body=Write here if you have questions" title="" target="_blank" rel="noopener noreferrer"><img class="contato" src="https://cdn-icons-png.flaticon.com/512/684/684816.png" alt="mailicon" style="width: 50px;"> </a>
@@ -30,6 +31,13 @@
                                            <a href="https://www.instagram.com/falantebaixinho/" target="_blank" rel="noopener noreferrer"><img class="contato" src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="instagramicon" style="width: 50px;"> </a></li> -->
                    </ul>
                   </nav>
+                  <div id="modal-container">
+                    <div class="modal-content" id="about-content">
+                      <span class="close">&times;</span>
+                      <h2>About Modal</h2>
+                      <p>This is the About modal content...</p>
+                    </div>
+                  </div>
                   <h1>Deivid Moura</h1>
                     <h3>Programming and Web Development Student</h3>
                     <!--
@@ -45,5 +53,5 @@
   </main>
 
 <footer style="text-align: center"><p>Developed in VS code. All rights reserved.</p></footer>
-              
+<script src="script.js"></script>
          </body>
