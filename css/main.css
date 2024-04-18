@@ -15,26 +15,32 @@ nav {
 
 nav.home {
   background-color: #2123af; /* Cor da navegação na seção Home */
+  color: #ffffff;
 }
 
 nav.working {
   background-color: #0f73b6; /* Cor da navegação na seção Working */
+  color: #ffffff;
 }
 
 nav.contact {
   background-color: #3b5998; /* Cor da navegação na seção Contact */
+  color: #ffffff;
 }
 
 .home-link {
-  color: #2123af; /* Cor da Home */
+  background-color: 2123af;
+  color: #ffffff; /* Cor da Home */
 }
 
 .working-link {
-  color: #0f73b6; /* Cor da Working */
+  background-color: 0f73b6;
+  color: #ffffff; /* Cor da Working */
 }
 
 .contact-link {
-  color: #3b5998; /* Cor da Contact */
+  background-color: 3b5998;
+  color: #ffffff; /* Cor da Contact */
 }
 
 
