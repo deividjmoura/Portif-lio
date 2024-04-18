@@ -12,3 +12,23 @@ nav {
   top: 0;
   z-index: 999;
 }
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#home {
+  background-color: #0851d8;
+}
+
+#working {
+  background-color: #0f73b6;
+}
+
+#contact {
+  background-color: #3b5998;
+}
