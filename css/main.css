@@ -5,7 +5,7 @@ body {
   background-color: #0851d8;
 }
 
-h1 {
+#home-section, working-section, contact-section {
   text-align: center;
   justify-content: center;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Sombreamento branco */
