@@ -21,15 +21,17 @@ section {
   color: white;
 }
 
+/* main.css */
 h1 {
   position: relative;
   font-family: 'Righteous', sans-serif;
   font-size: 20vh;
   text-align: center;
-  margin-top: 5vh; /* Ajuste conforme necessário */
+  margin-top: 20vh; /* Centraliza verticalmente */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra clara */
 }
 
+/* Estilo para adicionar uma linha abaixo do título */
 h1:before {
   content: '';
   position: absolute;
@@ -42,9 +44,11 @@ h1:before {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Estilo para animação da linha ao passar o mouse sobre o título */
 h1:hover:before {
   transform: scaleX(1);
 }
+
 
 #home {
   background-color: #0851d8;
