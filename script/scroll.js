@@ -1,21 +1,27 @@
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        setTimeout(function() {
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top
-            }, 500, 'easeInOutExpo'); // Alterei o tempo de animação para 5000ms (5 segundos)
-        }, 200); // Delay de 500ms antes de iniciar o scroll
-        event.preventDefault();
-    });    
+// scrollEffect.js
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.page-scroll');
 
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top'
+    links.forEach(function(each) {
+        each.onclick = scrollAnchors;
     });
 
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
-        $('.navbar-toggle:visible').click();
-    });
+    function scrollAnchors(e, respond = null) {
+        const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+        e.preventDefault();
+        var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+        const targetAnchor = document.querySelector(targetID);
+        if (!targetAnchor) return;
+        const originalTop = distanceToTop(targetAnchor);
+        window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+        const checkIfDone = setInterval(function() {
+            const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+            if (distanceToTop(targetAnchor) === 0 || atBottom) {
+                targetAnchor.tabIndex = '-1';
+                targetAnchor.focus();
+                window.history.pushState('', '', targetID);
+                clearInterval(checkIfDone);
+            }
+        }, 100);
+    }
 });
