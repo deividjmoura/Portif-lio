@@ -1,6 +1,6 @@
 ul {
   margin: 0;
-  padding: 15% 0; /* Aumenta a área vertical em 15% */
+  padding: 0; /* Aumenta a área vertical em 15% */
   display: flex;
   justify-content: center; /* Centraliza os itens horizontalmente */
   align-items: center; /* Centraliza os itens verticalmente */
