@@ -11,6 +11,7 @@ $(document).ready(function() {
         $('body').addClass('modal-active');
     });
     
+    
     // Função para fechar o modal
     $('#modal-overlay, #modal-close').click(function(){
         $('#modal-overlay').fadeOut();
