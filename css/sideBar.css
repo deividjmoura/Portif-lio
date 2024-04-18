@@ -1,9 +1,5 @@
 User
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif; /* Alterei a fonte para Arial para garantir que esteja disponível */
-}
+
 nav {
   background-color: #333; /* Cor de fundo do menu */
   position: fixed; /* Fixa o menu na tela */
