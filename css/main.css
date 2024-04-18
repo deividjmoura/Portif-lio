@@ -1,4 +1,29 @@
 /* main.css */
+
+/* Estilos para o H1 e H2 na sessão Home */
+#home h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 4;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+#home h1 span {
+  display: block;
+}
+
+#home h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+/* Demais estilos... */
 body {
   margin: 0;
   padding: 0;
