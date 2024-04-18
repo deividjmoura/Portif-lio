@@ -1,9 +1,11 @@
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 2000, 'easeInOutExpo'); // Aumentando o tempo de scroll para 2000ms
+        setTimeout(function() {
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+        }, 500); // Delay de 500ms antes de iniciar o scroll
         event.preventDefault();
     });
 
