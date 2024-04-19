@@ -1,5 +1,3 @@
-/* main.css */
-
 /* Estilos para o H1 e H2 na sessão Home */
 #home h1 {
   font-size: 5rem;
@@ -21,6 +19,12 @@
 #home h2 {
   font-size: 2rem;
   max-width: 400px;
+  margin-bottom: -15vw; 
+  line-height: 1;
+  font-weight: 500;
+  margin-right: -45rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Demais estilos... */
@@ -92,8 +96,41 @@ h1 {
 }
 
 #working {
-  background-color: #0f73b6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+
+.content {
+  padding-top: 15;
+  width: 200px; /* Largura total da content */
+  height: 350px; /* Altura total da content */
+  width: calc(27% - 10px); /* 10px é a soma das margens entre as divs */
+  max-width: calc(27% - 10px); /* 10px é a soma das margens entre as divs */ /
+  border: 1px solid #6e90eb; /* Cor da borda */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(3, 9, 1, 0.2); /* Sombra maior */
+  padding: 10px; /* Espaçamento interno */
+  overflow: hidden; /* Para garantir que a imagem não ultrapasse os limites da div */
+  overflow: hidden; /* Para garantir que o conteúdo não ultrapasse os limites da div */
+  position: relative; /* Para permitir que o conteúdo sobreponha o título */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
 
 #contact {
   background-color: #3b5998;
@@ -106,4 +143,7 @@ section div {
 }
 footer {
   background-color: #3b5998 ;
+}
+img {
+  border-radius: 10px;
 }
