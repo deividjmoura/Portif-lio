@@ -197,15 +197,16 @@ body{
   grid-gap: 40px;
 }
 
-.about-img-container{
-  position: relative;
-}
-
 .about-info{
+  margin-top: 95px;
   color: #fff;
   opacity: 0.6;
   font-size: 20px;
   line-height: 40px;
+}
+
+.about-img-container{
+  position: relative;
 }
 
 .about-img{
