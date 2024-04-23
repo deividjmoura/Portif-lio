@@ -1,74 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deivid Moura</title>
-    <link rel="shortcut icon" href="https://img.icons8.com/nolan/344/internet.png" type="image/x-icon">
-    <link href="./css/main.css" rel="stylesheet" title="Default Style">
-    <link href="./css/modal.css" rel="stylesheet" title="Default Style">
-    <link href="./css/sideBar.css" rel="stylesheet" title="Default Style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Deivid Moura</title>
 </head>
 <body>
-    <nav class="navbar-fixed-top">
-     <ul>
-        <li><a href="#home" class="page-scroll home-link">Home</a></li>
-        <li><a href="#" id="about">About</a></li> 
-        <li><a href="#working" class="page-scroll working-link">Working</a></li>
-        <li><a href="#contact" class="page-scroll contact-link">Contact</a></li>       
-      </ul>
-    </nav>
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Seja bem vindo!</h1>
-        <h2>
-          Esta página foi criada para servir como meu "currículo online", 
-          por assim dizer. Apresento aqui um pouco do meu desenvolvimento web, 
-          bem como minhas certificações e meus links para contato.
-        </h2>
-      </section>
+ <!-- navbar -->
+<nav class="navbar">
+  <ul class="link-group">
+      <li class="link active"><a href="#home-section">home</a></li>
+      <li class="link"><a href="#project-section">projects</a></li>
+      <li class="link"><a href="#about-section">about</a></li>
+      <li class="link"><a href="#contact-section">contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Working Section -->
-    <section id="working">
-      <h1>A LITTLE ABOUT MY WORK</h1>
-      <div class="container">
-          <div class="content">
-            <img src="img/MYPAGE.jpg" alt="Imagem" />
-            CONTEUDO  SOBRE A PÁGINA QUE ACESSAM
+<!-- home section -->
+
+<section id="home-section" class="home-section active">
+  <h1 class="hero-heading">Hello, I am <br> Deivid Moura</h1>
+  <img src="./img/prof.png" class="home-img" alt="">
+</section>
+
+<!-- project section -->
+<section id="project-section" class="project-section active">
+  <h1 class="project-heading">A Little Bit of My Work</h1>
+  <div class="project-container">
+    <div class="project-card">
+      <img src="./img/PROJECT1.jpg" class="project-img" alt="">
+      <div class="project-content">
+          <h1 class="project-title">Vendas Online</h1>
+          <p class="project-info">
+            I worked at Havan for eight months in the online sales sector, before 
+            being promoted to a new position. I developed an application in React to 
+            manage the orders we fulfilled. 
+            One of the notable points of this is the option to download a service report.    
+          </p>
+          <div class="project-btn-grp">
+              <button class="project-btn github"><a href="https://github.com/deividjmoura/vendasonline" target="_blank">github repo</a></button>
+              <button class="project-btn live"><a href="https://vendas-online.vercel.app/" target="_blank">see live</a></button>
           </div>
-        <div class="content">
-          <img src="img/EXERCICES.jpg" alt="Imagem" />
-          CONTEUDO SOBRE EXERCICIOS
-        </div>
-        <div class="content">
-          <img src="img/VENDAS.jpg" alt="Imagem" />
-          CONTEUDO SOBRE AOLICATIVO EM REACT DA HAVAN
       </div>
-    </section>
-    
+  </div>
+  
+  <div class="project-card">
+      <img src="./img/PROJECT2.jpg" class="project-img" alt="">
+      <div class="project-content">
+          <h1 class="project-title">C&C App</h1>
+          <p class="project-info">
+            Still in development. An app that I created using Google's appsheet is live, 
+            but this is the project under development for the app to control sales by 
+            salespeople at the printing company where I currently work.
+          </p>
+          <div class="project-btn-grp">
+              <button class="project-btn github"><a href="https://github.com/deividjmoura/copia-app" target="_blank" rel="noopener noreferrer">
+                github repo</a>
+              </button>
+              <button class="project-btn live"><a href="https://vendas-online.vercel.app/" target="_blank" rel="noopener noreferrer">
+                see live</a></button>
+          </div>
+      </div>
+  </div> 
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h1>Contact Section</h1>
-        <div>
-          <p>ntrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+<section id="about-section" class="about-section active">
+  <div class="about">
+      <div class="about-img-container">
+          <img src="./img/prof2.png" class="about-img" alt="">
+          <button class="download-cv-btn">download cv</button>
+      </div>
+      <p class="about-info">Programming has always been something that caught 
+        my attention, I remember as a child researching mobile applications and developing blogs. 
+        I currently work at the 
+        <a href="https://copiaecia.com.br/">Copia & CIA</a>
+        printing company, as a visual graphic programmer, 
+        but my intention is to work in the development area in the not too distant future.</p>
+  </div>
+
+  <!-- skills -->
+  <div class="skill-section">
+      <h1 class="heading">skills</h1>
+      <div class="skills-container">
+          <div class="skill-card">
+              <img src="img/html.png" class="skill-img" alt="">
+              <div class="skill-level">19.56%</div>
+              <h1 class="skill-name">CSS</h1>
+              <p class="skill-info">Just as the use of pure HTML is being replaced by
+                components, in the case of CSS, I am opting for styling libraries for 
+                ease of use and practicality.</p>      
+          </div>
+          <div class="skill-card">
+            <img src="img/html.png" class="skill-img" alt="">
+            <div class="skill-level">26.22%</div>
+            <h1 class="skill-name">HTML</h1>
+            <p class="skill-info">I have some courses for improvement, but today 
+              I use more components ready for editing, to reduce time spent.</p>            
+          </div>
+          <div class="skill-card">
+            <img src="img/html.png" class="skill-img" alt="">
+            <div class="skill-level">53,59%</div>
+            <h1 class="skill-name">JAVASCRIPT</h1>
+            <p class="skill-info">Currently the most used, I believe that not 
+              only by me, due to the wide network of developers who use it, we 
+              have many problems already solved and a huge range of options with this language.</p>
+          </div>
+
+      </div>
+  </div>
+
+  <!-- timeline -->
+  <div class="timeline">
+      <h1 class="heading">education and experience</h1>
+      <div class="card">
+          <div class="card-body">
+              <h1 class="card-title">2013</h1>
+              <p class="card-detail">Finished high school in SESI-PR</p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">2013-2021</h1>
+            <p class="card-detail">I spent this time working as a freelancer and CLT. 
+              I had almost no information about programming, 
+              despite already having some contact with HTML, CSS and JavaScript through blogs.</p>
         </div>
-        <div>
-          <p>ntrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      </div>
+      <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">2021-2022</h1>
+            <p class="card-detail">I completed many courses in the area, 
+              I made friends who taught me (and still teach). I did my first real 
+              project, the Online Sales App for Havan</p>
         </div>
-        <div>
-          <p>ntrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+      </div>
+      <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">2022-TODAY</h1>
+            <p class="card-detail">Studying and developing the C&C App for the printing 
+              company where I work. I'm not a programmer here, but as it's something I 
+              really like, I was asked if I could develop the app and I accepted the challenge.</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Navigation -->
+  </div>
+</section>
 
+<!-- contact section -->
+<section id="contact-section" class="contact-section active">
+  <form class="contact-form" action="mailto:dejesusdemouradeivid@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" autocomplete="off" placeholder="name">
+      <input type="text" name="email" autocomplete="off" placeholder="email">
+      <textarea name="message" placeholder="message" autocomplete="off"></textarea>
+      <button type="submit" class="form-submit-btn">contact</button>
+  </form>
+  <!-- map -->
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d444.70838084381563!2d-48.660897158044065!3d-26.914060013373476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x94d8cc756ee3a947%3A0xda3329cb365e0c35!2sem%20frente%20a%20universidade%20Copia%20%26%20Cia%20-%20R.%20Uruguai%2C%20515%20-%20Centro%2C%20Itaja%C3%AD%20-%20SC%2C%2088302-203!3m2!1d-26.914024599999998!2d-48.6605753!5e0!3m2!1spt-BR!2sbr!4v1713559680022!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+</section>
 
-    <footer style="text-align: center"><p>Developed in VS code. All rights reserved.</p></footer>
-
-    <script src="./script/scroll.js"></script>
-    <script src="./script/scrollX.js"></script>
 </body>
 </html>
+
