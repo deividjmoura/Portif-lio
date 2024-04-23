@@ -162,38 +162,6 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d444.70838084381563!2d-48.660897158044065!3d-26.914060013373476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x94d8cc756ee3a947%3A0xda3329cb365e0c35!2sem%20frente%20a%20universidade%20Copia%20%26%20Cia%20-%20R.%20Uruguai%2C%20515%20-%20Centro%2C%20Itaja%C3%AD%20-%20SC%2C%2088302-203!3m2!1d-26.914024599999998!2d-48.6605753!5e0!3m2!1spt-BR!2sbr!4v1713559680022!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
 </section>
 
-<script>
-  // JavaScript code for responsive behavior
-  function toggleResponsiveClass() {
-    var screenWidth = window.innerWidth;
-    var mobileWidth = 480; // Definindo a largura máxima de um dispositivo móvel (pode ajustar conforme necessário)
-    var navbar = document.querySelector('.navbar');
-    var links = document.querySelectorAll('.link a');
-
-    if (screenWidth <= mobileWidth) {
-      navbar.classList.add('responsive');
-      links.forEach(function(link) {
-        link.style.padding = '10px 15px';
-        link.style.margin = '0 5px';
-        link.style.lineHeight = '50px';
-        link.style.fontSize = '14px';
-      });
-    } else {
-      navbar.classList.remove('responsive');
-      links.forEach(function(link) {
-        link.style.padding = '10px 30px';
-        link.style.margin = '0 20px';
-        link.style.lineHeight = '80px';
-        link.style.fontSize = '20px';
-      });
-    }
-  }
-
-  // Call the function when the page loads and when it's resized
-  window.onload = toggleResponsiveClass;
-  window.onresize = toggleResponsiveClass;
-</script>
-
 </body>
 </html>
 
