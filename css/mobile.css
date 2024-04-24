@@ -1,0 +1,76 @@
+@media only screen and (max-width: 768px) {
+    /* Estilos para dispositivos móveis */
+
+/* Ajustes gerais */
+body {
+    padding-top: 60px; /* Ajusta o espaçamento acima do conteúdo para acomodar a barra de navegação */
+  }
+  
+  /* Barra de navegação responsiva */
+  .navbar {
+    height: 60px; /* Altura reduzida para dispositivos móveis */
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    padding-left: -5px;
+  }
+  
+  .link a {
+    padding: 10px 15px; /* Reduz o espaçamento dos links na barra de navegação */
+  }
+  
+  /* Seção inicial (home) */
+  .home-section {
+    padding: 0 20px; /* Reduz o preenchimento nas laterais */
+  }
+  
+  /* Imagem na seção inicial */
+  .home-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+  }
+  
+  /* Seção de projetos */
+  .project-section {
+    padding: 50px 20px; /* Reduz o preenchimento nas laterais e superior */
+  }
+  
+  /* Container de projetos */
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta o layout de projetos para se adaptar ao tamanho da tela */
+    grid-gap: 20px; /* Espaçamento entre os projetos */
+  }
+  
+  /* Cartão de projeto */
+  .project-card {
+    height: auto; /* Altura automática para acomodar o conteúdo variável */
+  }
+  
+  /* Seção "Sobre mim" */
+  .about-section {
+    padding: 50px 20px; /* Reduz o preenchimento nas laterais e superior */
+  }
+  
+  /* Formato da grade para seção de habilidades */
+  .skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta o layout para se adaptar ao tamanho da tela */
+    grid-gap: 20px; /* Espaçamento entre as habilidades */
+  }
+  
+  /* Seção de contato */
+  .contact-section {
+    padding: 50px 20px; /* Reduz o preenchimento nas laterais e superior */
+  }
+  
+  /* Formulário de contato */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Garante que os campos de entrada ocupem toda a largura disponível */
+  }
+  
+  }
