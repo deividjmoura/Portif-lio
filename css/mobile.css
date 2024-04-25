@@ -16,7 +16,7 @@ body {
   }
   
   .link a {
-    padding: 10px 15px; /* Reduz o espaçamento dos links na barra de navegação */
+    padding: 0px 5px; /* Reduz o espaçamento dos links na barra de navegação */
   }
   
   /* Seção inicial (home) */
@@ -33,6 +33,13 @@ body {
     width: 100%;
     object-fit: cover;
     opacity: 0.2;
+  }
+
+  .hero-heading{
+    color: #fff;
+    font-size: 80;
+    font-weight: 400;
+    opacity: .8;
   }
   
   /* Seção de projetos */
@@ -52,8 +59,24 @@ body {
   }
   
   /* Seção "Sobre mim" */
+  .about {
+    grid-template-columns: 30% 65%; /* Layout original para telas maiores */
+  }
+
+  .about-info {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
   .about-section {
     padding: 50px 20px; /* Reduz o preenchimento nas laterais e superior */
+  }
+
+  .about-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
   }
   
   /* Formato da grade para seção de habilidades */
@@ -61,16 +84,27 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta o layout para se adaptar ao tamanho da tela */
     grid-gap: 20px; /* Espaçamento entre as habilidades */
   }
+  .skill-card{
+    margin-bottom: 5px;
+    position: relative;
+  }
+
+  .skill-img{
+    position: absolute;
+    margin-top: 5px;/* Coloca a imagem no final do seu contêiner */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    height: 50px;
+    opacity: .5;
+    z-index: -1;
+  }
+
+  p.skill-info {
+
+  }
   
   /* Seção de contato */
   .contact-section {
-    padding: 50px 20px; /* Reduz o preenchimento nas laterais e superior */
+    padding: 0px 0px; /* Reduz o preenchimento nas laterais e superior */
   }
   
-  /* Formulário de contato */
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%; /* Garante que os campos de entrada ocupem toda a largura disponível */
-  }
-  
-  }
