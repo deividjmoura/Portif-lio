@@ -440,7 +440,7 @@ body{
   margin-bottom: 20px;
 }
 
-.contact-section{
+/*.contact-section{
   position: absolute;
   top: 0;
   opacity: 0;
@@ -472,18 +472,6 @@ body{
   height: 280px;
   resize: none;
   font-family: sans-serif;
-}
-
-.form-submit-btn{
-  background: #ff4f4f;
-  color: #fff;
-  text-transform: capitalize;
-  padding: 15px 40px;
-  display: block;
-  margin: auto;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 .map{
@@ -584,7 +572,6 @@ body{
     z-index: 8;
   }
   
-  /* Add other common styles here */
   
   border-radius: 10px;
 }
