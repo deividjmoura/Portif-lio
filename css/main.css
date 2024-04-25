@@ -31,8 +31,7 @@ body{
 .link-group{
   list-style: none;
   display: flex;
-  text-decoration: none;
-  color: inherit;
+  
 }
 
 .link a{
